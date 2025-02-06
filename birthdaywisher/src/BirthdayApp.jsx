@@ -117,7 +117,7 @@ const BirthdayAppPage = () => {
       }}
     >
       <audio autoPlay loop>
-        <source src="..\public\birthday.mp3" type="audio/mpeg" />
+        <source src="..\public\birthday.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
 
