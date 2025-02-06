@@ -52,7 +52,7 @@ const DetailsPage = () => {
             />
           </div>
           <div className={`mb-3 animate__animated animate__fadeInUp ${showForm ? 'animate__delay-2s' : ''}`}>
-            <label htmlFor="relationship" className="form-label">Your Relationship with Milan Bhimani:</label>
+            <label htmlFor="relationship" className="form-label">What relation do you hold to me?</label>
             <input
               type="text"
               id="relationship"
