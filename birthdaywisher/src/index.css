@@ -1,0 +1,21 @@
+/* Global reset for scroll effect */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Disables scrolling */
+  }
+  
+  /* Optional: If you want to prevent scroll on the body only */
+  body {
+    overflow: hidden; /* Disables scrolling */
+  }
+  
+  /* If you're using custom scrollbars, remove those too */
+  ::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Prevents the scrollbar thumb from showing */
+  }
+  

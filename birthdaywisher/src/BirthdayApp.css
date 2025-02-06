@@ -1,0 +1,201 @@
+/* CSS for smooth background color transition */
+body {
+    background-color: #ffeb3b; /* A warm yellow background */
+    transition: background-color 1s ease-in-out;
+    position: relative; /* For positioning fireworks and confetti */
+    overflow: hidden; /* Prevents scrolling from showing animations outside */
+}
+
+/* Falling Emoji Animations */
+.falling-heart {
+    animation: fall 2s infinite linear, bounce 1s infinite alternate;
+}
+
+.falling-cake {
+    animation: fall 3s infinite linear, zoomIn 2s infinite;
+}
+
+.falling-balloon {
+    animation: fall 2s infinite linear, bounce 1s infinite alternate;
+}
+
+.falling-star {
+    animation: fall 1.5s infinite linear, sparkle 0.5s infinite alternate;
+}
+
+/* Confetti Effect */
+.confetti {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: confettiFall 2s linear infinite;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Fireworks Effect */
+/* Fireworks Effect */
+.fireworks {
+    position: absolute;
+    top: 20%;  /* Adjusted position */
+    left: 80%; /* Moves fireworks away from center */
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #ff5722, transparent);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
+    animation: fireworksAnimation 1.5s ease-in-out infinite;
+    z-index: 9999; /* Ensures it appears above other elements */
+    pointer-events: none; /* Prevents interference with UI */
+}
+.fireworks {
+    position: absolute;
+    top: 20%;  /* Adjusted position */
+    left: 80%; /* Moves fireworks away from center */
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #ff5722, transparent);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
+    animation: fireworksAnimation 1.5s ease-in-out infinite;
+    z-index: 9999; /* Ensures it appears above other elements */
+    pointer-events: none; /* Prevents interference with UI */
+}
+@keyframes fireworksAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(2);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* Keyframes for Falling Animations */
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Button Hover Effect */
+button {
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    background-color: #ff6347;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #ff4500;
+}
+
+/* Transition for the text */
+h1, p {
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Text Fade-in Effect */
+.fadeIn {
+    animation: fadeInText 2s ease-in-out;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Bouncing Text */
+.bounceText {
+    animation: bounceText 1s infinite alternate;
+}
+
+@keyframes bounceText {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
