@@ -117,7 +117,7 @@ const BirthdayAppPage = () => {
       }}
     >
       <audio autoPlay loop>
-        <source src="..\public\birthday.mp3" type="audio/mp3" />
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
 
